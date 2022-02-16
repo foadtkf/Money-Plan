@@ -1,0 +1,31 @@
+#header {
+    color: brown;
+    /* font-family: 'Archivo', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    width: 20%;
+    margin-top: 2%;
+}
+
+input {
+    border: 1px aliceblue;
+    background-color: #e5e5e5;
+    margin-left: 2%;
+    border-radius: 3%;
+}
