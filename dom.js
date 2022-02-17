@@ -4,7 +4,9 @@ function element(name) {
 }
 // function to check whether its a string or not
 function strcheck(name) {
-    if (isNaN(element(name).value))
+    if (isNaN(element(name).value)) {
+        return false;
+    } else if (element(name).value.length < 1)
         return false;
     else
         return true;
@@ -19,9 +21,11 @@ function numcheck(name) {
 }
 // Event for "calculate" button
 element('calculate').addEventListener('click', function() {
-    if (!strcheck('income') || !strcheck('exp-food') || !strcheck('exp-rent') || !strcheck('exp-cloth'))
+    if (!strcheck('income') || !strcheck('exp-food') || !strcheck('exp-rent') || !strcheck('exp-cloth')) {
+        element('balance').innerText = 0;
+        element('exp-total').innerText = 0;
         alert('Please enter number');
-    else if (!numcheck('income') || !numcheck('exp-food') || !numcheck('exp-rent') || !numcheck('exp-cloth'))
+    } else if (!numcheck('income') || !numcheck('exp-food') || !numcheck('exp-rent') || !numcheck('exp-cloth'))
         alert('Value cannot be negative');
 
     else {
@@ -55,7 +59,9 @@ element('save').addEventListener('click', function() {
         if (temp > balance) {
             alert('savings cannot be greater than balance');
             element('save-percent').value = '';
-        } else {
+        } else if (temp < 0)
+            alert('savings cannot be negative');
+        else {
             element('savings').innerText = temp;
             element('remainings').innerText = balance - temp;
         }
