@@ -1,3 +1,11 @@
+// Variable names list:
+// input fileds:
+// income: #income; food: #exp-food; rent: #exp-rent; cloth: #exp-cloth;save: #save-percent; 
+// buttons:
+// calculate-button: #calculate; save-button: #save;
+// headers:
+// total-expense: #exp-total; balance: #balance; saving-amount: #savings; remaining-balance: #remainings;
+
 // function to return an element by id
 function element(name) {
     return document.getElementById(name);
